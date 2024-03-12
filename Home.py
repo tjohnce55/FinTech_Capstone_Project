@@ -1,10 +1,5 @@
 # Import the required libraries.
 import streamlit as st
-import pandas as pd
-import numpy as np
-import requests
-import yfinance as yf
-import plotly.express as px
 
 # Configure the setup of the pages.
 st.set_page_config(
