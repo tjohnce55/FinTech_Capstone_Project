@@ -63,7 +63,7 @@ if st.button("Submit"):
                 trailing_pe = round(fundamentals["trailingPE"], 2)
                 st.metric("Trailing PE: (Share Price / Recent EPS)", trailing_pe)
                 price_to_book = round(fundamentals["priceToBook"], 2)
-                st.metric("Price-To-Book", price_to_book)
+                st.metric("Price-To-Book: (Share Price / Book Value per Share)", price_to_book)
                 st.metric("Yahoo Finance Recommendation:", fundamentals["recommendationKey"])
             with column2:
                 quick_ratio = round(fundamentals["quickRatio"], 2)
