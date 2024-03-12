@@ -9,6 +9,14 @@ If the user enters an invalid ticker they will be asked to reenter a valid ticke
 # Import the required libraries and dependencies.
 import streamlit as st
 import yfinance as yf
+import pandas as pd
+import numpy as np
+import requests
+import feedparser
+import time
+from io import BytesIO
+import base64
+from stocknews import StockNews
 
 # Display a title for the the stock news page.
 st.title("📰 Stock News Articles")
@@ -34,11 +42,28 @@ if st.button("Give Me News"):
         st.header(f"{ticker} News:")
         
         # Loop through the articles and display the titles, publishers, and article links.
-        for i in range(8):
-            st.subheader(f"Article {i+1}")
-            st.write("Title: ", stock_news[i]["title"])
-            st.write("Publisher: ", stock_news[i]["publisher"])
-            st.write("Article Link: ", stock_news[i]["link"])
+        for i, article in enumerate(stock_news[:10]):  # Display up to 10 news articles
+            col1, col2 = st.columns(2)
+            with col1:
+                thumbnail_data = article.get("thumbnail")
+                if thumbnail_data and "resolutions" in thumbnail_data:
+                    thumbnail_url = thumbnail_data["resolutions"][0]["url"]
+                    try:
+                        response = requests.get(thumbnail_url)
+                        if response.status_code == 200:
+                            image_data = response.content
+                            encoded_image = base64.b64encode(image_data).decode()
+                            st.image(f"data:image/png;base64,{encoded_image}")
+                        else:
+                            st.write("Failed to retrieve image. Status code:", response.status_code)
+                    except Exception as e:
+                        st.write("Error fetching image:", e)
+                else:
+                    st.write("No valid thumbnail image URL available for this article.")
+            with col2:
+                st.write("**TITLE:** ", stock_news[i]["title"])
+                st.write("**PUBLISHER:** ", stock_news[i]["publisher"])
+                st.write("**ARTICLE LINK:** ", stock_news[i]["link"])
             st.divider()
     
     # Display a warning message that appears when the user enters an invalid stock ticker.
