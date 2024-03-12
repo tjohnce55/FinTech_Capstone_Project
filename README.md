@@ -23,11 +23,11 @@ To use this package you first need to obtain an API Key and a Secret Key. Go her
 
 ##### 1. Create a .env file:
 
-      Create a new file in your project’s root directory and name it “.env”.
+Create a new file in your project’s root directory and name it “.env”.
         
 ##### 2. Define your API Keys:
 
-      In the .env file, define your API key with the descriptive names shown below:
+In the .env file, define your API key with the descriptive names shown below:
 
       ALPACA_API_KEY = "Enter Alpaca API Key here"
 
@@ -35,9 +35,7 @@ To use this package you first need to obtain an API Key and a Secret Key. Go her
 
 ##### 3. Assign the value to the API Keys:
 
-      Assign the actual API key values to the name you defined in step 2.
-      
-      For example, ALPACA_API_KEY = "asdjfdkbfjd127237123".
+Assign the actual API key values to the name you defined in step 2. For example, ALPACA_API_KEY = "asdjfdkbfjd127237123".
 
 ## **_Run the Streamlit-based Application:_**
 
