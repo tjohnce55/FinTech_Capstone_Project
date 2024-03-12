@@ -9,14 +9,8 @@ If the user enters an invalid ticker they will be asked to reenter a valid ticke
 # Import the required libraries and dependencies.
 import streamlit as st
 import yfinance as yf
-import pandas as pd
-import numpy as np
 import requests
-import feedparser
-import time
-from io import BytesIO
 import base64
-from stocknews import StockNews
 
 # Display a title for the the stock news page.
 st.title("📰 Stock News Articles")

@@ -1,5 +1,7 @@
 # **_Stock Analysis Tool!_**
 
+This project was completed by Tyler Johnson and Ikaika Smith. It is the final capstone project for the ASU FinTech Bootcamp.
+
 ![image](https://github.com/tjohnce55/FinTech_Capstone_Project/assets/142754993/032a8c72-f4ea-44c1-ab33-40f3546bc4d9)
 
 ## **_Overview/Goal:_**
@@ -8,13 +10,7 @@ simplify their stock analysis. The user will be able to enter a stock’s ticker
 historical price of that stock, some of the company’s fundamentals, and recent news articles for 
 the stock. They will also be able to run Monte Carlo Simulations to forecast future stock prices.
 
-## **_Questions:_**
-1. What libraries will we need in order to complete this project and accomplish our goal?
-2. What data will we need to gather? Where will we get the data?
-3. What tools/features will the application provide for the user?
-4. How will the application help the user better understand their investment options?
-
-## **_Libraries_**
+## **_Libraries and Installation Guide_**
 - Streamlit
 - Yahoo Finance
 - Pandas
@@ -47,6 +43,4 @@ the stock. They will also be able to run Monte Carlo Simulations to forecast fut
 
 
 
-
-## **_FinTech_Capstone_Project_**
-This project was completed by Tyler Johnson and Ikaika Smith. It is the final capstone project for the ASU FinTech Bootcamp.
+## **_Conclusion_**
