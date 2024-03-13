@@ -13,7 +13,7 @@ import requests
 import base64
 
 # Display a title for the the stock news page.
-st.title("📰 Stock News Articles")
+st.header("📰 Stock News Articles")
 
 # Display a subheader that explains the tool.
 st.write("Enter a ticker below. The tool will obtain and display recent news articles for the company of your choice.")
