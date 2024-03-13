@@ -13,7 +13,10 @@ import yfinance as yf
 import plotly.express as px
 
 # Display a title for the the historical pricing tool.
-st.subheader("📈 Historical Pricing Tool")
+st.header("📈 Historical Pricing Tool")
+
+# Display a subheader that explains the tool.
+st.write("Enter a stock ticker and a date range below. The tool will display the price movement of that stock over the selected time period, along with the highest price, lowest price, and price change.")
 
 # Create a text input for the stock ticker.
 ticker = st.text_input("⬇️ Enter a Stock Ticker")
