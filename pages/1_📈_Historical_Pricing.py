@@ -13,7 +13,7 @@ import yfinance as yf
 import plotly.express as px
 
 # Display a title for the the historical pricing tool.
-st.subheader("📈 Stock Pricing Tool")
+st.subheader("📈 Historical Pricing Tool")
 
 # Create a text input for the stock ticker.
 ticker = st.text_input("⬇️ Enter a Stock Ticker")
